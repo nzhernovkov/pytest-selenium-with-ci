@@ -22,6 +22,7 @@ tests:
 
 report:
   stage: report
+  needs: [ tests ]
   image: frankescobar/allure-docker-service
   script:
     - allure generate -c ./allure-results -o ./allure-report
@@ -29,5 +30,3 @@ report:
     paths:
       - ./allure-report
     expire_in: 1 day
-  rules:
-    - when: always
