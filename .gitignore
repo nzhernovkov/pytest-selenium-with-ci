@@ -1,0 +1,8 @@
+.vscode/
+.idea/
+.pytest_cache/
+documents/
+tmp/
+venv/
+**/__pycache__/
+allure_results/
