@@ -29,6 +29,7 @@ def driver(request):
     selenium_port = request.config.getoption("selenium_port")
     chrome_options = ChromeOptions()
     chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--disable-dev-shm-usage")
     chrome_options.add_argument("window-size=1920x1080")
     if selenium_host:
         driver = webdriver.Remote(
