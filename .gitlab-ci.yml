@@ -24,7 +24,6 @@ report:
   stage: report
   image: frankescobar/allure-docker-service
   script:
-    - ls ./allure-results
     - allure generate -c ./allure-results -o ./allure-report
   artifacts:
     paths:
